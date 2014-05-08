@@ -1,0 +1,187 @@
+@font-face
+	font-family: LeagueGothic /* имя шрифта для CSS правил */
+	src: url(../fonts/LeagueGothic-Regular.otf) /* если шрифт не установлен, тогда загружаем его по указанному пути */
+body
+	font-family: "LeagueGothic"			
+
+
+
+
+
+.container
+	width: 960px 
+	margin: 0 auto
+/*-----text------*/
+.te	
+/*----------header----------*/
+.header
+	height: 850px//KILL
+	background: #af9fb1 url(../img/bg.jpg) no-repeat
+	+cover 
+.navbar
+	+clr
+	padding-top: 70px
+.navbar__left
+	float: left
+.navbar__right
+	float: right
+.logo
+	background: url(../img/logo.png) no-repeat 
+	display: inline-block
+	height: 39px
+	width: 152px
+	+hide-text
+	vertical-align: top
+.nav
+	+clr
+	li
+		float: left
+		margin-left: 43px
+	a			
+		padding: 0 5px 
+		text-decoration: none
+		color: #fff
+		font-family: "LeagueGothic"		
+		font-size: 24px
+		line-height: 32px
+		+text-shadow(1px 2px 2px rgba(0,0,0,.4))
+		vertical-align: bottom
+		+transition (0.2s)
+		font-stretch: condensed
+		&:hover
+			+text-shadow(0 0 8px rgba(255,255,255,.8))
+		&:active
+			+opacity(0.6)
+						
+	.is-active
+		a
+			border-bottom: 2px solid #edbfff 	
+			
+/*-----slider----------*/
+.slider
+	background: rgba(0, 0, 0, 0.2) 
+	margin-top: 169px
+	position: relative
+	.slider__prev, .slider__next
+		position: absolute
+		top: 50%
+		cursor: pointer	
+		z-index: 111
+	.slider__prev
+		left: 5%
+		+s(i-slider_prev)			
+	.slider__next
+		right: 5%
+		+s(i-slider_next)					
+.slider__pager
+	position: absolute
+	bottom: -109px
+	left: 68.5%
+	z-index: 111
+	span
+		margin-right: 7px
+		display: inline-block
+		width: 15px
+		height: 15px
+		background: #41424b 
+		background: rgba(0,0,0,0.3)
+		+border-radius(50%)
+		font-size: 0
+		cursor: pointer
+		&.cycle-pager-active, &:hover, &:active
+			position: relative
+			&:after
+				position: absolute
+				top: 2px
+				left: 2px
+				content: ""
+				display: inline-block
+				height: 11px
+				width: 11px
+				+border-radius(50%)
+				background: #fff    
+		&:hover
+			&:after
+				+opacity(0.4)
+		&:active
+			&:after
+				+opacity(0.8) 
+.slider__item
+	display: inline-block
+	height: 400px
+	width: 100%	
+	+cover
+.slider__content
+	+clr
+	margin: 0 auto 
+	.i-book
+		display: block
+		margin: 0 auto 0px 
+.slider__left
+	float: left
+	width: 510px
+	color: #fefefe
+	font-size: 60px
+	+text-shadow(0 2px 2px rgba(0,0,0,.3))
+	padding-top: 78px  
+.slider__headline
+	font-size: 60px
+	line-height: 60px 
+.slider__title
+	font-size: 32px
+	line-height: 30px
+	color: #edbfff
+	margin-bottom: 7px
+.slider__text
+	font-size: 20px
+	line-height: 24px
+	font-family: "Myriad Pro" 	
+.slider__right
+	float: right
+	padding-right: 70px
+.slider__img	
+	height: 434px
+	margin-top: -17px 
+.i-play
+	position: absolute
+	top: 132px
+	left: 71.5%
+	z-index: 199999
+	+s(i-play)
+	cursor: pointer				
+						
+			
+
+/*----------main----------*/
+.main
+
+/*----------footer----------*/
+.footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------768px-------------------------------------------------*/
+@media (max-width: 991px)
+	.container
+		width: 768px
+/*-----------------480px------------------------------------------------*/			
+@media (max-width: 767px)
+	.container
+		width: 480px
+/*------------------320px-----------------------------------------------*/			
+@media (max-width: 479px)
+	.container
+		width: 320px	
