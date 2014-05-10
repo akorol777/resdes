@@ -44,7 +44,10 @@ a
 	&:first-child
 		margin-left: 0	
 	+r(w991)
-		margin-left: 3.3% 	 	
+		margin-left: 3.3% 
+	+r(w767)
+		width: 100%	
+		margin: 0 0 28px 0  	
 /*-----header---------------------------------------*/
 .header
 	background: #af9fb1 url(../img/bg.jpg) no-repeat
@@ -53,21 +56,32 @@ a
 	padding-bottom: 169px 
 	+r(w991)
 		padding-bottom: 155px 
+	+r(w767)
+		padding-bottom: 99px	
 .navbar
 	+clr
 	padding-top: 70px
 	+r(w991)
 		padding-left: 14px 
+	+r(w767)
+		padding-left: 0		
 .navbar__left 
 	float: left
 	margin-bottom: 29px
 	+r(w991)
 		float: none
 		padding-left: 5px
+	+r(w767)
+		text-align: center
+		padding-left: 0
+		margin-bottom: 22px	
 .navbar__right
+	position: relative
 	float: right
 	+r(w991)
 		float: none
+	+r(w767)
+		text-align: center	
 /*-----about-----------------------------------------*/
 .about
 	+clr
@@ -75,6 +89,8 @@ a
 	+box-shadow(inset 0px -1px 0px 0px #f9f9f9, inset 0px -2px 0px 0px #0d151b, inset 0px -3px 0px 1px #322539)
 	@include background-image(linear-gradient(bottom, #312539 0%, #745083 100%))
 	padding: 76px 0 70px 
+	+r(w767)
+		padding-bottom: 46px 
 .about__col-set	
 	background: url(../img/icons/i-set.png) no-repeat 
 .about__col-chat	
@@ -110,6 +126,9 @@ a
 		max-height: 145px
 		overflow: hidden
 		margin-bottom: 6px
+	+r(w767)
+		max-height: 75px
+		margin-bottom: 12px 	
 .about__link
 	color: #fff
 	font-size: 18px
@@ -121,6 +140,8 @@ a
 	&:hover
 		text-decoration: none
 		+text-shadow(0 0 8px rgba(255,255,255,.8))
+	+r(w767)
+		margin-right: 26px
 /*-----news------------------------------------------------*/
 .news
 	+box-shadow(inset 0px 5px 10px 0px #d3d3d3)
@@ -128,6 +149,8 @@ a
 	background: #f9f9f9 
 	+clr
 	border-bottom: 1px solid #e6e6e6 
+	+r(w767)
+		padding: 69px 0 83px 
 .news__col
 	float: left
 	width: 47%
@@ -136,12 +159,17 @@ a
 	display: inline-block 
 	+clr
 	&:first-child
+		margin-left: 0
+	+r(w767)
+		width: 100%	
 		margin-left: 0	
 /*-----updates----------------------------------------------*/
 .updates
 	padding: 27px 0px 0px 2px 
 	+r(w991)
 		padding-left: 7px 
+	+r(w767)
+		padding: 87px 0 0 83px 	
 	.h3
 		margin-bottom: 14px
 	.h4
@@ -158,6 +186,8 @@ a
 	line-height: 28px
 	padding-right: 20px
 	+text-shadow(0 1px 0 #fff)	
+	+r(w767)
+		padding-right: 60px 
 .updates__right
 	display: inline-block
 	vertical-align: top
@@ -176,6 +206,9 @@ a
 	background: #ececec
 	border-top: 1px solid #D8D8D8 
 	padding: 94px 0 94px 
+	+r(w767)
+		padding-top: 73px 
+		padding-bottom: 81px
 	.logo-art
 		margin-bottom: 12px	
 		+r(w991)
@@ -193,19 +226,25 @@ a
 	.text
 		+r(w991)
 			overflow: hidden
-			height: 168px		
+			max-height: 168px	
+		+r(w767)
+			max-height: 118px		
 	.col
 		overflow: hidden
 		max-height: 208px
 		+r(w991)
 			padding-left: 19px	
-			max-height: 100% 	
+			max-height: 100% 
+		+r(w767)
+
 /*-----icons----------------------------------*/
 .icons
 	border-top: 1px solid #fefefe
 	border-bottom: 1px solid #fefefe
 	background: #f9f9f9 
-	padding: 24px 0 29px 
+	padding: 24px 0 29px
+	+r(w767)
+		padding: 36px 0 14px 
 .icons-in
 	text-align: center
 	.ico
@@ -213,6 +252,9 @@ a
 		margin: 0 3.5%  
 		+r(w991)
 			margin: 0 3.4% 
+		+r(w767)
+			margin: 0 6% 
+			margin-bottom: 25px	
 /*-----footer-------------------------------*/
 .footer	
 	+clr
@@ -228,10 +270,17 @@ a
 		float: none
 		margin-left: 18px
 		margin-bottom: 29px
+	+r(w767)
+		margin-left: 22px 	
 .footer__right
 	float: right	
 	+r(w991)
 		margin-right: 20px	
+	+r(w767)
+		display: block	
+		float: none
+		margin-right: 0
+		text-align: center
 /*-----design-----*/
 .design
 	color: #fff
@@ -333,6 +382,54 @@ a
 	.is-active
 		a
 			border-bottom: 2px solid #edbfff
+.nav-head			
+	+r(w767)
+		position: absolute
+		top: 0px
+		left: 50%
+		margin-left: -122px 
+		z-index: 113
+		width: 244px
+		display: inline-block
+		overflow: hidden
+		+border-radius(7px)
+		+opacity(.9)
+		border: 1px solid #041016
+		background-color: #35293d
+		+box-shadow(0 3px 5px rgba(0,0,0,.16))
+		li
+			float: none
+			margin-left: 0 
+			+box
+			width: 100%
+			height: 40px
+			line-height: 40px 
+			@include opacity(.9)
+			background-color: #35273d
+			&:first-child>a
+				+box-shadow(none) 
+		.is-active
+			a
+				border-bottom: 2px solid transparent 
+				border-bottom: 2px solid #edbfff
+				display: inline
+				&:hover
+					background: transparent 
+					border-bottom: 2px solid transparent
+					border-bottom: 2px solid #edbfff	
+					cursor: default 					
+		a
+			display: inline-block
+			+box
+			width: 100%
+			height: 100%
+			line-height: 43px
+			+box-shadow(inset 0 1px 0 rgba(0,0,0,.59), inset 0 2px 0 rgba(105,82,114,.59))			
+			&:hover
+				border-bottom: 2px solid #edbfff
+				background: rgba(0,0,0,.3)
+				+text-shadow(none)
+			&:active		
 .nav-small
 	li
 		&:first-child
@@ -340,7 +437,12 @@ a
 	a	
 		padding: 0
 		font-size: 20px
-		line-height: 20px	
+		line-height: 20px
+	+r(w767)
+		li
+			margin-left: 0
+			margin-right: 5%
+		a		
 /*-----slider----------------------------*/
 .slider
 	background: rgba(0, 0, 0, 0.2) 
@@ -354,22 +456,30 @@ a
 		cursor: pointer	
 		z-index: 111
 		+r(w991)
-			top: 45% 
+			top: 45%
+		+r(w767)
+			top: 41% 	 
 	.slider__prev
 		left: 5%
 		+s(i-slider_prev)	
 		+r(w991)
-			left: 10% 		
+			left: 10% 
+		+r(w767)
+			left: 17.5% 					
 	.slider__next
 		right: 5%
 		+s(i-slider_next)
 		+r(w991)
-			right: 10% 			
+			right: 10%
+		+r(w767)
+			right: 17.5% 			 			
 .slider__item
 	display: inline-block
 	width: 100%
-	padding-bottom: 55px	
+	//padding-bottom: 55px	
 	+cover
+	+r(w991)
+		//padding-bottom: 78px
 .slider__content
 	+clr
 	margin: 0 auto 
@@ -387,6 +497,9 @@ a
 	+r(w991)
 		padding: 98px 0 0 43px 
 		width: 35.5%
+	+r(w767)
+		padding: 93px 0 0 40px
+		width: 42.5% 	
 .slider__headline
 	font-size: 60px
 	line-height: 60px 
@@ -396,6 +509,9 @@ a
 	+r(w991)
 		font-size: 48px
 		line-height: 48px
+	+r(w767)
+		font-size: 36px
+		line-height: 36px  	
 .slider__title
 	font-size: 32px
 	line-height: 30px
@@ -408,6 +524,9 @@ a
 		font-size: 24px
 		line-height: 39px
 		margin-bottom: 0
+	+r(w767)
+		font-size: 18px
+		line-height: 22px	
 .slider__text
 	font-size: 20px
 	line-height: 24px
@@ -418,22 +537,33 @@ a
 		font-size: 18px 
 		line-height: 26px
 		overflow: hidden
-		height: 110px  	
+		height: 110px 
+	+r(w767)
+		display: none	 	
 .slider__right
 	float: right
 	width: 43%
 	text-align: center
-	height: 344px 
-	line-height: 344px 
+	height: 435px 
+	line-height: 435px 
+	margin-top: -17px 
+	margin-bottom: -19px	
 	+r(w991)
 		width: 48% 
+		margin-top: -23px 
+		margin-bottom: -13px 
+	+r(w767)
+		height: 304px
+		line-height: 304px
+		margin-top: -11px 
+		margin-bottom: -48px 
+		+box
+		padding-right: 21px 			
 .slider__img	
-	margin-top: -17px 
 	text-align: center
 	max-width: 100% 
 	vertical-align: middle
-	+r(w991)
-		margin-top: -23px 
+	height: 100%
 .slider__pager
 	position: absolute
 	bottom: -109px
@@ -442,6 +572,9 @@ a
 	+r(w991)
 		bottom: -54px
 		left: 66.5%
+	+r(w767)
+		bottom: -38px
+		left: 48.5%  	
 	span
 		margin-right: 7px
 		display: inline-block
@@ -485,7 +618,16 @@ a
 		.h3
 			+r(w991)
 			font-size: 24px
-			line-height: 26px 			  
+			line-height: 26px 
+	+r(w767)
+		margin-right: 20px
+		padding-bottom: 31px	
+		.h3
+			font-size: 30px
+			line-height: 32px
+			margin-bottom: 12px
+
+
 	&:after
 		content: ""
 		position: absolute
@@ -518,17 +660,24 @@ a
 		height: 168px
 		+r(w991)
 			height: 145px 
+		+r(w767)
+			height: 170px 		
 .slider-mini__content
 	+clr
 	.h3>a
 		+r(w991)
 			display: block
+	.h3>a
+		+r(w767)
+			display: inline-block		
 .slider-mini__pager	
 	bottom: -40px
 	left: 40.5%
 	+r(w991)
 		bottom: -40px
-		left: 36.5% 		
+		left: 36.5% 
+	+r(w767)
+		left: 39%			
 	span
 		background: #fff
 		+box
@@ -555,12 +704,18 @@ a
 	position: absolute
 	top: 132px
 	left: 71.5%
-	z-index: 199999
+	z-index: 112
 	+s(i-play)
 	cursor: pointer
 	+r(w991)
 		top: 126px
-		left: 70.5%  	
+		left: 70.5% 
+	+r(w767)
+		+s(i-play_mini)
+		top: 95px
+		left: 65.5% 
+
+			 	
 .ico-1
 	+s(ico-1)
 .ico-2
