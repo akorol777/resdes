@@ -5,7 +5,7 @@ body
 	font-family: "LeagueGothic"	
 .wrap
 	+clr	
-	min-width: 340px
+	min-width: 300px
 	+box 
 a
 	text-decoration: none
@@ -40,16 +40,18 @@ a
 	width: 960px 
 	margin: 0 auto
 	+clr
+	position: relative
 .col
 	float: left
 	width: 30%
 	margin-left: 5% 
 	+box
+	+clr
 	&:first-child
 		margin-left: 0	
-	+r(w991)
+	+r(w1055)
 		margin-left: 3.3% 
-	+r(w767)
+	+r(w800)
 		width: 100%	
 		margin: 0 0 28px 0  	
 /*-----header---------------------------------------*/
@@ -58,37 +60,37 @@ a
 	+cover 
 	border-bottom: 1px solid #33253a 	
 	padding-bottom: 169px 
-	+r(w991)
+	+r(w1055)
 		padding-bottom: 155px 
-	+r(w767)
+	+r(w800)
 		padding-bottom: 99px
-	+r(w479)
+	+r(w505)
 		padding-bottom: 161px 		
 .navbar
 	+clr
 	padding-top: 70px
-	+r(w991)
+	+r(w1055)
 		padding-left: 14px 
-	+r(w767)
+	+r(w800)
 		padding-left: 0		
 .navbar__left 
 	float: left
 	margin-bottom: 29px
-	+r(w991)
+	+r(w1055)
 		float: none
 		padding-left: 5px
-	+r(w767)
+	+r(w800)
 		text-align: center
 		padding-left: 0
 		margin-bottom: 22px	
-	+r(w479)
+	+r(w505)
 		margin-bottom: 26px 	
 .navbar__right
 	position: relative
 	float: right
-	+r(w991)
+	+r(w1055)
 		float: none
-	+r(w767)
+	+r(w800)
 		text-align: center	
 /*-----about-----------------------------------------*/
 .about
@@ -97,9 +99,9 @@ a
 	+box-shadow(inset 0px -1px 0px 0px #f9f9f9, inset 0px -2px 0px 0px #0d151b, inset 0px -3px 0px 1px #322539)
 	@include background-image(linear-gradient(bottom, #312539 0%, #745083 100%))
 	padding: 76px 0 70px 
-	+r(w767)
+	+r(w800)
 		padding-bottom: 46px 
-	+r(w479)
+	+r(w505)
 		padding-top: 70px 	
 .about__col-set	
 	background: url(../img/icons/i-set.png) no-repeat 
@@ -110,16 +112,18 @@ a
 .about__col
 	padding-left: 63px
 	background-position: 10px 6px 
-	+r(w991)
+	+r(w1055)
 		padding-left: 83px 
-		background-position: 30px 2px  	
+		background-position: 30px 2px 
+	+r(w505)
+		padding-right: 15px	 	
 .about__title
 	color: #fff
 	font-size: 30px
 	line-height: 30px 
 	+text-shadow(0 1px 0 #0e1418)
 	margin-bottom: 8px
-	+r(w991)
+	+r(w1055)
 		font-size: 24px
 		line-height: 24px
 		margin-bottom: 4px
@@ -132,11 +136,11 @@ a
 	margin-bottom: 20px
 	overflow: hidden
 	max-height: 119px 
-	+r(w991)
+	+r(w1055)
 		max-height: 145px
 		overflow: hidden
 		margin-bottom: 6px
-	+r(w767)
+	+r(w800)
 		max-height: 75px
 		margin-bottom: 12px 	
 .about__link
@@ -150,7 +154,7 @@ a
 	&:hover
 		text-decoration: none
 		+text-shadow(0 0 8px rgba(255,255,255,.8))
-	+r(w767)
+	+r(w800)
 		margin-right: 26px
 /*-----news------------------------------------------------*/
 .news
@@ -159,7 +163,7 @@ a
 	background: #f9f9f9 
 	+clr
 	border-bottom: 1px solid #e6e6e6 
-	+r(w767)
+	+r(w800)
 		padding: 69px 0 83px 
 .news__col
 	float: left
@@ -170,17 +174,17 @@ a
 	+clr
 	&:first-child
 		margin-left: 0
-	+r(w767)
+	+r(w800)
 		width: 100%	
 		margin-left: 0	
 /*-----updates----------------------------------------------*/
 .updates
 	padding: 27px 0px 0px 2px 
-	+r(w991)
+	+r(w1055)
 		padding-left: 7px 
-	+r(w767)
+	+r(w800)
 		padding: 87px 0 0 83px 
-	+r(w479)
+	+r(w505)
 		padding-left: 19px 		
 	.h3
 		margin-bottom: 14px
@@ -198,7 +202,7 @@ a
 	line-height: 28px
 	padding-right: 20px
 	+text-shadow(0 1px 0 #fff)	
-	+r(w767)
+	+r(w800)
 		padding-right: 60px 
 .updates__right
 	display: inline-block
@@ -206,7 +210,8 @@ a
 	padding: 4px 0 0 67px
 	width: 100%
 	+box
-	+r(w479)
+	+r(w505)
+		padding-right: 15px
 		.h4
 			overflow: hidden
 			white-space: nowrap
@@ -217,69 +222,68 @@ a
 		overflow: hidden
 		text-overflow: wrap
 		width: 100%
-		+r(w991)
+		+r(w1055)
 			max-width: 250px 
-		+r(w479)
+		+r(w505)
 			max-width: 213px 	
 /*----article--------------------------------------*/		
 .article
 	background: #ececec
 	border-top: 1px solid #D8D8D8 
 	padding: 94px 0 94px 
-	+r(w767)
+	+r(w800)
 		padding-top: 73px 
 		padding-bottom: 81px
-	+r(w479)
+	+r(w505)
 		display: none	
 	.logo-art
 		margin-bottom: 12px	
-		+r(w991)
+		+r(w1055)
 			display: none		
 	.copyright
 		margin-bottom: 10px
-		+r(w991)
+		+r(w1055)
 			display: none
 	.h3
 		margin-bottom: 6px
 		display: block
-		+r(w991)
+		+r(w1055)
 			font-size: 24px
 			line-height: 34px
 	.text
-		+r(w991)
+		+r(w1055)
 			overflow: hidden
 			max-height: 168px	
-		+r(w767)
+		+r(w800)
 			max-height: 118px		
 	.col
 		overflow: hidden
 		max-height: 208px
-		+r(w991)
+		+r(w1055)
 			padding-left: 19px	
 			max-height: 100% 
-		+r(w767)
-
+		+r(w800)
 /*-----icons----------------------------------*/
 .icons
 	border-top: 1px solid #fefefe
 	border-bottom: 1px solid #fefefe
 	background: #f9f9f9 
 	padding: 24px 0 29px
-	+r(w767)
+	+r(w800)
 		padding: 36px 0 14px 
-	+r(w479)
+	+r(w505)
 		padding: 51px 0 0 	
 .icons-in
 	text-align: center
 	.ico
 		vertical-align: middle
 		margin: 0 3.5%  
-		+r(w991)
+		+r(w1055)
 			margin: 0 3.4% 
-		+r(w767)
+		+r(w800)
 			margin: 0 6% 
 			margin-bottom: 25px	
-		+r(w479)
+		+r(w505)
 			margin: 0 10%
 			margin-bottom: 58px  	
 /*-----footer-------------------------------*/
@@ -289,23 +293,23 @@ a
 	background: url(../img/bg-footer.jpg)
 	padding: 46px 0 47px  
 	+box-shadow(inset 0px 3px 6px 0px rgba(0,0,0,0.5))	
-	+r(w991)
+	+r(w1055)
 		padding-bottom: 85px 
-	+r(w479)
+	+r(w505)
 		padding: 4px 0 145px 	
 .footer__left
 	float: left
-	+r(w991)
+	+r(w1055)
 		float: none
 		margin-left: 18px
 		margin-bottom: 29px
-	+r(w767)
+	+r(w800)
 		margin-left: 22px 	
 .footer__right
 	float: right	
-	+r(w991)
+	+r(w1055)
 		margin-right: 20px	
-	+r(w767)
+	+r(w800)
 		display: block	
 		float: none
 		margin-right: 0
@@ -412,7 +416,7 @@ a
 		a
 			border-bottom: 2px solid #edbfff
 .nav-head			
-	+r(w767)
+	+r(w800)
 		position: absolute
 		top: 0px
 		left: 50%
@@ -447,7 +451,7 @@ a
 					border-bottom: 2px solid transparent
 					border-bottom: 2px solid #edbfff	
 					cursor: default 
-					+r(w767)
+					+r(w800)
 						cursor: pointer					
 		a
 			display: inline-block
@@ -461,7 +465,7 @@ a
 				background: rgba(0,0,0,.3)
 				+text-shadow(none)
 .nav-head_hide
-	+r(w767)
+	+r(w800)
 		border: none
 		background-color: transparent 
 		+box-shadow(none)
@@ -482,12 +486,12 @@ a
 		padding: 0
 		font-size: 20px
 		line-height: 20px
-	+r(w767)
+	+r(w800)
 		li
 			margin-left: 0
 			margin-right: 5%
 		a		
-	+r(w479)
+	+r(w505)
 		display: none	
 /*-----slider----------------------------*/
 .slider
@@ -495,44 +499,40 @@ a
 	margin-top: 140px
 	position: relative
 	+clr
-	+r(w991)
+	+r(w1055)
 		margin-top: 73px 
-	+r(w479)
+	+r(w505)
 		background: transparent 	
 	.slider__prev, .slider__next
 		position: absolute
 		top: 50%
 		cursor: pointer	
 		z-index: 111
-		+r(w991)
+		+r(w1055)
 			top: 45%
-		+r(w767)
+		+r(w800)
 			top: 41% 	
-		+r(w479)	
+		+r(w505)	
 			top: 66%  
 	.slider__prev
-		left: 5%
+		left: -4%
 		+s(i-slider_prev)	
-		+r(w991)
-			left: 10% 
-		+r(w767)
-			left: 17.5% 
-		+r(w479)
-			left: 14.5% 						
+		+r(w1055)
+			left: -1% 
+		+r(w505)
+			left: 3% 	 						
 	.slider__next
-		right: 5%
+		right: -4%
 		+s(i-slider_next)
-		+r(w991)
-			right: 10%
-		+r(w767)
-			right: 17.5%
-		+r(w479)
-			right: 14.5%			 			 			
+		+r(w1055)
+			right: -1%
+		+r(w505)
+			right: 3%			 			 			
 .slider__item
 	display: inline-block
 	width: 100%
 	+cover
-	+r(w991)
+	+r(w1055)
 .slider__content
 	+clr
 	margin: 0 auto 
@@ -547,16 +547,17 @@ a
 	+text-shadow(0 2px 2px rgba(0,0,0,.3))
 	padding-top: 78px 
 	overflow: hidden 
-	+r(w991)
+	+box
+	+r(w1055)
 		padding: 98px 0 0 43px 
 		width: 35.5%
-	+r(w767)
+	+r(w800)
 		padding: 93px 0 0 40px
 		width: 42.5% 	
-	+r(w479)
+	+r(w505)
 		width: 100%	
 		padding: 89px 0 0 65px	
-		max-width: 205px
+		max-width: 270px
 		overflow: hidden		
 .slider__headline
 	font-size: 60px
@@ -564,10 +565,10 @@ a
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: clip	
-	+r(w991)
+	+r(w1055)
 		font-size: 48px
 		line-height: 48px
-	+r(w767)
+	+r(w800)
 		font-size: 36px
 		line-height: 36px  	
 .slider__title
@@ -578,26 +579,27 @@ a
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: clip
-	+r(w991)
+	+r(w1055)
 		font-size: 24px
 		line-height: 39px
 		margin-bottom: 0
-	+r(w767)
+	+r(w800)
 		font-size: 18px
 		line-height: 22px
- 		
+	+r(w505)
+		max-width: 100% 	
 .slider__text
 	font-size: 20px
 	line-height: 24px
 	font-family: "Myriad Pro"
 	overflow: hidden
 	max-height: 170px 
-	+r(w991)
+	+r(w1055)
 		font-size: 18px 
 		line-height: 26px
 		overflow: hidden
 		height: 110px 
-	+r(w767)
+	+r(w800)
 		display: none	 	
 .slider__right
 	float: right
@@ -607,18 +609,18 @@ a
 	line-height: 435px 
 	margin-top: -17px 
 	margin-bottom: -19px	
-	+r(w991)
+	+r(w1055)
 		width: 48% 
 		margin-top: -23px 
 		margin-bottom: -13px 
-	+r(w767)
+	+r(w800)
 		height: 304px
 		line-height: 304px
 		margin-top: -11px 
 		margin-bottom: -48px 
 		+box
 		padding-right: 21px 
-	+r(w479)
+	+r(w505)
 		display: none				
 .slider__img	
 	text-align: center
@@ -630,13 +632,13 @@ a
 	bottom: -109px
 	left: 68.5%
 	z-index: 111
-	+r(w991)
+	+r(w1055)
 		bottom: -54px
 		left: 66.5%
-	+r(w767)
+	+r(w800)
 		bottom: -38px
 		left: 48.5%  
-	+r(w479)
+	+r(w505)
 		bottom: -92px
 		left: 42.5%  		
 	span
@@ -676,21 +678,21 @@ a
 	margin-left: 24px
 	padding: 27px 39px 36px
 	position: relative
-	+r(w991)
+	+r(w1055)
 		margin-left: 42px
 		padding: 27px 25px 41px 40px
 		.h3
-			+r(w991)
+			+r(w1055)
 			font-size: 24px
 			line-height: 26px 
-	+r(w767)
+	+r(w800)
 		margin-right: 20px
 		padding-bottom: 31px	
 		.h3
 			font-size: 30px
 			line-height: 32px
 			margin-bottom: 12px
-	+r(w479)
+	+r(w505)
 		padding: 24px 35px 25px 37px 
 		.h3
 			font-size: 24px
@@ -709,7 +711,7 @@ a
 		border-style: solid
 		border-width: 0 19px 19px 0
 		border-color: transparent #fff transparent transparent	
-		+r(w991)
+		+r(w1055)
 			visibility: hidden
 	&:before
 		content: ""
@@ -722,40 +724,40 @@ a
 		border-style: solid
 		border-width: 0 21px 21px 0
 		border-color: transparent rgba(0, 0, 0, 0.05) transparent transparent
-		+r(w991)
+		+r(w1055)
 			visibility: hidden 	
 	+clr	
 	.text
 		overflow: hidden
 		height: 168px
-		+r(w991)
+		+r(w1055)
 			height: 145px 
-		+r(w767)
+		+r(w800)
 			height: 170px 		
 .slider-mini__content
 	+clr
 	.h3>a
-		+r(w991)
+		+r(w1055)
 			display: block
 	.h3>a
-		+r(w767)
+		+r(w800)
 			display: inline-block	
 	.h3>a
-		+r(w479)
+		+r(w505)
 			display: block			
 .slider-mini__pager	
 	bottom: -40px
 	left: 40.5%
-	+r(w991)
+	+r(w1055)
 		bottom: -40px
 		left: 36.5% 
-	+r(w767)
+	+r(w800)
 		left: 39%			
 	span
 		background: #fff
 		+box
 		border: 1px solid #f0f0f0
-		+r(w991)
+		+r(w1055)
 			height: 17px
 			width: 17px	
 			margin-right: 5px		
@@ -766,10 +768,9 @@ a
 				border: 1px solid #454545
 				@include background-image(linear-gradient(bottom, #454545 0%, #6a6a6a 100%))
 				+box	
-				+r(w991)	
+				+r(w1055)	
 					top: 2px
 					left: 2px	
-		
 /*-----ico-----------------------------------------------------*/	
 .ico
 	display: inline-block
@@ -780,17 +781,15 @@ a
 	z-index: 112
 	+s(i-play)
 	cursor: pointer
-	+r(w991)
+	+r(w1055)
 		top: 126px
 		left: 70.5% 
-	+r(w767)
+	+r(w800)
 		+s(i-play_mini)
 		top: 95px
 		left: 65.5% 
-	+r(w479)
-		display: none	
-
-			 	
+	+r(w505)
+		display: none		 	
 .ico-1
 	+s(ico-1)
 .ico-2
@@ -803,95 +802,16 @@ a
 	+s(ico-5)
 .ico-6
 	+s(ico-6)	
-
+/*-----container---------------------------------*/				
 .container
-	.w991
+	.w1055
 		display: none
-		+r(w991)
-			display: block									
-	  
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------768px-------------------------------------------------*/
-// @media (max-width: 991px)
-// 	.container
-// 		width: 768px
-// /*-----------------480px------------------------------------------------*/			
-// @media (max-width: 767px)
-// 	.container
-// 		width: 480px
-// /*------------------320px-----------------------------------------------*/			
-// @media (max-width: 479px)
-// 	.container
-// 		width: 320px
-		
-.container
-	+r(w991)
+		+r(w1055)
+			display: block
+	+r(w1055)
 		width: 768px
-	+r(w767)
+	+r(w800)
 		width: 480px
-	+r(w479)
-		width: 320px					
-
-
-
-
-
-/*----------------768px-------------------------------------------------*/
-@media (max-width: 991px)
-	.one
-		background: #F0F 
-/*-----------------480px------------------------------------------------*/			
-@media (max-width: 767px)
-	.one
-		background: #F00
-/*------------------320px-----------------------------------------------*/			
-@media (max-width: 479px)
-	.one
-		background: #00F
-.two
-	+r(w991)
-		background: #F0F 		
-.two
-	+r(w767)
-		background: #F00
-.two
-	+r(w479)
-		background: #00f					
+	+r(w505)
+		max-width: 320px
+		width: 100% 					

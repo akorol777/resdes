@@ -34,7 +34,27 @@ $w991: 991px
 $w767: 767px
 $w479: 479px
 
+$w1055: 1055px
+$w800: 800px
+$w505: 505px
+
+
+
+
+
+
 =r($media)
+
+	@if $media == w1055
+		@media only screen and (max-width: $w1055)
+			@content
+	@if $media == w800
+		@media only screen and (max-width: $w800)
+			@content
+	@if $media == w505
+		@media only screen and (max-width: $w505)
+			@content						
+
 	@if $media == w991
 		@media only screen and (max-width: $w991)
 			@content
